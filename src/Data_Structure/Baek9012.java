@@ -14,7 +14,7 @@ public class Baek9012 {
             boolean isValid = true; // Stack 내부의 요소 존재 여부 확인
 
             // '('이면 push하고, ')'이면 pop
-            // ')'가 없으면 false로 변환
+            // ')'가 있는데 스택이 비어있으면 false로 변환
             for(char ch : line.toCharArray()){
                 if (ch == '('){
                     stack.push(ch);
@@ -28,6 +28,7 @@ public class Baek9012 {
                 }
             }
 
+            // 스택 내부에 요소가 있으면 false
             if (!stack.isEmpty()){
                 isValid = false;
             }
