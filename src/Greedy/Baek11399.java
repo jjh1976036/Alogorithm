@@ -3,7 +3,7 @@ package src.Greedy;
 import java.util.*;
 import java.io.*;
 
-public class baek11399 {
+public class Baek11399 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
