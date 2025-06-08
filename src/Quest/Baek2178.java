@@ -10,7 +10,7 @@ public class Baek2178 {
     static int[] dx = {-1, 1, 0, 0};  // 상, 하
     static int[] dy = {0, 0, -1, 1};  // 좌, 우
 
-    public static int bfs(int x , int y) {
+    public static int bfs(int x, int y) {
         Queue<int[]> que = new LinkedList<>();
         que.offer(new int[]{x, y});
         visited[x][y] = true;
@@ -37,7 +37,7 @@ public class Baek2178 {
         return maze[N - 1][M - 1];  // 도착 지점까지의 거리
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -47,15 +47,13 @@ public class Baek2178 {
         maze = new int[N][M];
         visited = new boolean[N][M];
 
-        for (int i = 0; i < N; i++){
+        for (int i = 0; i < N; i++) {
             String line = br.readLine();
-            for (int j = 0; j < M; j++){
+            for (int j = 0; j < M; j++) {
                 maze[i][j] = line.charAt(j) - '0';  // 문자 -> 숫자 변환
             }
         }
 
         System.out.println(bfs(0, 0));  // 시작 좌표
-
-
     }
 }
